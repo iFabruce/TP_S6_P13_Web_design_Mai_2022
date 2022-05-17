@@ -1,7 +1,9 @@
 Options +FollowSymlinks
 RewriteEngine on
-RewriteRule ^climatenews/?.*/([_a-z0-9]*)_([_a-z0-9]*).php$  fiche_blog.php?url=$1&id=$2 [L]
-RewriteRule ^climatenews/?.*/([_a-z0-9]*)_([_a-z0-9]*).php$  liste_blog.php?url=$1&id=$2 [L]
+RewriteRule ^climatenews/accueil$  pages/accueil_fo.php [L]
+RewriteRule ^climatenews/climatenews/blogs$  pages/liste_blog_fo.php[L]
+RewriteRule ^climatenews/blog/([_a-z0-9]*)$  fiche_blog_fo.php?id=$1 [L]
+
 
 # MOD_DEFLATE COMPRESSION
 SetOutputFilter DEFLATE

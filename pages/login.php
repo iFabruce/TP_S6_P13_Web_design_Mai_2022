@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
               <button type="submit" class="btn btn-warning">Submit</button>
             </form>
             <br>
-            <a href="./pages/accueil_fo.php">Acceder au FrontOffice</a>
+            <a href="climatenews/accueil">Acceder au FrontOffice</a>
         </div>
         <div class="col-md-4"></div>
 

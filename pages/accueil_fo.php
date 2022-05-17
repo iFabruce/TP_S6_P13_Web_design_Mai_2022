@@ -12,11 +12,11 @@
     <link href="../img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="../https://fonts.gstatic.com">
-    <link href="../https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"> 
 
     <!-- Font Awesome -->
-    <link href="../https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
     <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -29,11 +29,11 @@
 
 <body>
    
-    <!-- Navbar Start -->
- <div class="container-fluid nav-bar p-0">
+<!-- Navbar Start -->
+<div class="container-fluid nav-bar p-0">
     <div class="container-lg p-0">
         <nav class="navbar navbar-expand-lg bg-secondary navbar-dark">
-            <a href="../index.html" class="navbar-brand">
+            <a href="index.html" class="navbar-brand">
                 <h1 class="m-0 text-white display-4"><span class="text-primary">C</span>limat<span class="text-primary">N</span>ews</h1>
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -41,11 +41,11 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav ml-auto py-0">
-                    <a href="..//" class="nav-item nav-link active">Accueil</a>
-                    <a href=".././pages/liste_blog_fo.php" class="nav-item nav-link">Blog</a>
-                    <a href=".././pages/login_bo.php" class="nav-item nav-link">Backoffice</a>
-                    
+                    <a href="/" class="nav-item nav-link active">Accueil</a>
+                    <a  href="../pages/liste_blog_fo.php" class="nav-item nav-link">Blog</a>
+                    <a href="../index.php" class="nav-item nav-link">BackOffice</a>
 
+              
                 </div>
             </div>
         </nav>
@@ -202,9 +202,9 @@
         <div class="col-lg-3 col-md-6 mb-5">
             <h5 class="font-weight-bold text-primary mb-4">Liens rapides</h5>
             <div class="d-flex flex-column justify-content-start">
-                <a class="text-white mb-2" href="..//"><i class="fa fa-angle-right text-primary mr-2"></i>Accueil</a>
-                <a class="text-white mb-2" href="..//blog"><i class="fa fa-angle-right text-primary mr-2"></i>Blog</a>
-                <a class="text-white mb-2" href="..//faq"><i class="fa fa-angle-right text-primary mr-2"></i>FAQ</a>
+                <a class="text-white mb-2" href="../"><i class="fa fa-angle-right text-primary mr-2"></i>Accueil</a>
+                <a class="text-white mb-2" href="../pages/liste_blog_fo.php"><i class="fa fa-angle-right text-primary mr-2"></i>Blog</a>
+                <a class="text-white mb-2" href="../index.php"><i class="fa fa-angle-right text-primary mr-2"></i>BackOffice</a>
            
             </div>
         </div>

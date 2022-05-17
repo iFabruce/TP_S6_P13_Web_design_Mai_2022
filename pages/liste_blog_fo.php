@@ -51,9 +51,10 @@ require ('../inc/functions.php');
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav ml-auto py-0">
                     <a href="/" class="nav-item nav-link active">Accueil</a>
-                    <a href="/blog" class="nav-item nav-link">Blog</a>
-                    <a href="/faq" class="nav-item nav-link">FAQ</a>
+                    <a  href="../pages/liste_blog_fo.php" class="nav-item nav-link">Blog</a>
+                    <a href="../index.php" class="nav-item nav-link">BackOffice</a>
 
+              
                 </div>
             </div>
         </nav>
