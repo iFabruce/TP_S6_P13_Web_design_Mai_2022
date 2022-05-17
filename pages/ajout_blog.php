@@ -42,6 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					<button type="submit" class="btn btn-warning" >Ajouter</button>
 				
 			</form>
+			<a href="liste_blog.php">Retour</a>
 		</div>
 		<div class="col-md-4"></div>
 		

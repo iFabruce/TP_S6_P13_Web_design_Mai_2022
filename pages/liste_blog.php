@@ -49,7 +49,7 @@ require ('../inc/functions.php');
 				<?php }?>
 		</tbody>
 		</table>
-
+			<a href="ajout_blog.php">Ajouter blog</a>
 		</div>
 		
     </div>
