@@ -33,14 +33,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="col-md-4">
 			<h2>Ajouter blog</h2><br>
 			<form action="<?php echo $_SERVER['SCRIPT_NAME']?>"  method="post">
-				<ul>
-					<input type="text" class="form-control" name="titre" placeholder="Titre" >
-					<input type="text" class="form-control" name="description" placeholder="Description" >
-					<input type="date" class="form-control" name="date" placeholder="Date de publication" >
+				
+					<input type="text" class="form-control" name="titre" placeholder="Titre" ><br>
+					<input type="text" class="form-control" name="description" placeholder="Description" ><br>
+					<input type="date" class="form-control" name="date" placeholder="Date de publication" ><br>
 					<input type="file" name="photo" >
 					
 					<input type="submit" value="ajouter" title="set down" >
-				</ul>
+				
 			</form>
 		</div>
 		<div class="col-md-4"></div>
