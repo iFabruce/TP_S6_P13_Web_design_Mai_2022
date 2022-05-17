@@ -1,20 +1,15 @@
 <?php
 require ('../inc/functions.php');
 	session_start();
-
-	$blogs=getAllBlogs();
-	if(isset($_GET['delete'])){
+	$blog=getOneBlog($_GET['id']);
 	
-		delete_blog($_GET['id']);
-		header("Location:".$_SERVER['SCRIPT_NAME']."");	
-	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>Blog</title>
+    <title>Detail Blog</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -30,15 +25,14 @@ require ('../inc/functions.php');
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets//owl.carousel.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="../css/style.css" rel="stylesheet">
 </head>
 
 <body>
-   
-    <!-- Navbar Start -->
+     <!-- Navbar Start -->
  <div class="container-fluid nav-bar p-0">
     <div class="container-lg p-0">
         <nav class="navbar navbar-expand-lg bg-secondary navbar-dark">
@@ -61,66 +55,69 @@ require ('../inc/functions.php');
 </div>
 <!-- Navbar End -->
 
+
+
     <!-- Page Header Start -->
     <div class="container-fluid page-header d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5 mb-5">
-        <h1 class="display-4 text-white mb-3 mt-0 mt-lg-5">Blog</h1>
+        <h1 class="display-4 text-white mb-3 mt-0 mt-lg-5">Blog Detail</h1>
         <div class="d-inline-flex text-white">
             <p class="m-0"><a class="text-white" href="">Home</a></p>
             <p class="m-0 px-2">/</p>
-            <p class="m-0">Blog</p>
+            <p class="m-0">Detail</p>
         </div>
     </div>
     <!-- Page Header Start -->
 
 
-    <!-- Blog Start -->
+    <!-- Detail Start -->
     <div class="container py-5">
         <div class="row">
-            
-            <!-- Blog Grid Start -->
-            <?php foreach ($blogs as $blog) {?>
+            <!-- Blog Detail Start -->
             <div class="col-lg-8">
-                <div class="row">
-                    <div class="col-md-12 mb-3">
-                        <div class="position-relative">
-                            <img class="img-fluid w-100" src="img/blog-1.jpg" alt="">
-                           
+                <div class="position-relative">
+                    <img class="img-fluid w-100" src="img/blog-1.jpg" alt="">
+                  
+                </div>
+                <div class="pt-4 pb-2">
+                    <div class="d-flex mb-3">
+                        <div class="d-flex align-items-center">
+                        
                         </div>
-                        <div class="border border-top-0 mb-3" style="padding: 30px;">
-                            <div class="d-flex mb-3">
-                                <div class="d-flex align-items-center">
-                                   
-                                </div>
-                                <div class="d-flex align-items-center ml-4">
-                                    <i class="far fa-bookmark text-primary"></i>
-                                    <a class="text-muted ml-2" href=""><?php echo $blog['date']?></a>
-                                </div>
-                            </div>
-                            <a class="h4 font-weight-bold" href="fiche_blog_fo.php?id=<?php echo $blog['id'];?>"><?php echo $blog['titre']?></a>
-                          
+                        <div class="d-flex align-items-center ml-4">
+                            <i class="far fa-bookmark text-primary"></i>
+                            <a class="text-muted ml-2" href=""><?php echo $blog['date'];?></a>
                         </div>
                     </div>
+                    <h2 class="font-weight-bold"><?php echo $blog['titre'];?></h2>
                 </div>
-            </div>
-        	<?php }?>
 
-            <!-- Blog Grid End -->
+                <div class="mb-5">
+                        <p><?php echo $blog['description'];?></p>
+                       
+                </div>
+
+               
+                
+            </div>
+            <!-- Blog Detail End -->
 
             <!-- Sidebar Start -->
             <div class="col-lg-4 mt-5 mt-lg-0">
               
 
-              
+               
 
-              
+                
 
-                <!-- Tags End -->
+               
+
+                
 
                 <!-- Plain Text Start -->
                 <div>
                     <h3 class="font-weight-bold mb-4">A vous la lecture</h3>
                     <div class="border p-3">
-                        Choisissez le blog qui vous intéresse le plus.
+                       Vous pouvez voir ici le detail conçernant le blog que vous avez choisi
                     </div>
                 </div>
                 <!-- Plain Text End -->
@@ -128,10 +125,10 @@ require ('../inc/functions.php');
             <!-- Sidebar End -->
         </div>
     </div>
-    <!-- Blog End -->
+    <!-- Detail End -->
 
 
-  <!-- Footer Start -->
+     <!-- Footer Start -->
   <div class="container-fluid bg-secondary text-white mt-5 pt-5 px-sm-3 px-md-5">
     <div class="row pt-5">
         <div class="col-lg-3 col-md-6 mb-5">
@@ -172,7 +169,7 @@ require ('../inc/functions.php');
     </p>
 </div>
 <!-- Footer End -->
-   
+
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-up"></i></a>

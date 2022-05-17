@@ -1,5 +1,26 @@
 <?php 
+	
 	include('connection.php');
+		function getAllBlogs()
+		{
+			$sql = "select * from blog";
+			$list_req = mysqli_query(dbconnect(),$sql);
+			$result = array();
+		while ($member = mysqli_fetch_array($list_req)) {
+			$result[] = $member;
+		}
+			return $result;
+			mysqli_free_result($list_req);
+		}
+	
+		function getOneBlog($id)
+		{
+			$sql = "select * from blog where id =".$id;
+			$req = mysqli_query(dbconnect(),$sql);
+			$result = mysqli_fetch_assoc($req);
+			return $result;
+			mysqli_free_result($req);
+		}
 	function get_member_by_mail($mail)
 	{
 		$sql = "select * from membres where email='%s'";
@@ -29,18 +50,6 @@
 		mysqli_free_result($member_req);
 		return $result;
 		mysqli_free_result($member_req);
-	}
-
-	function getAllBlogs()
-	{
-		$sql = "select * from blog";
-		$list_req = mysqli_query(dbconnect(),$sql);
-		$result = array();
-    while ($member = mysqli_fetch_array($list_req)) {
-        $result[] = $member;
-    }
-		return $result;
-		mysqli_free_result($list_req);
 	}
 	function list_members()
 	{
