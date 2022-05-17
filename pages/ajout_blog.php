@@ -3,7 +3,7 @@ require ('../inc/functions.php');
 session_start();
 $user= $_SESSION['user'];
 if ($_SERVER['REQUEST_METHOD'] == 'POST') { 
-	add_categorie($_POST['nom'],$user);
+	add_blog($_POST['titre'],$_POST['description'],$_POST['date'],$_POST['photo']);
 }
 ?>
 <!DOCTYPE html>
@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	
 	<div class="container">
     <div class="row">
-	<nav class="navbar navbar-dark bg-warning">
+	<nav class="navbar navbar-dark">
 				
 			</nav>
     </div>
@@ -37,9 +37,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					<input type="text" class="form-control" name="titre" placeholder="Titre" ><br>
 					<input type="text" class="form-control" name="description" placeholder="Description" ><br>
 					<input type="date" class="form-control" name="date" placeholder="Date de publication" ><br>
-					<input type="file" name="photo" >
+					<input type="file" name="photo" ><br>
 					
-					<input type="submit" value="ajouter" title="set down" >
+					<button type="submit" class="btn btn-warning" >Ajouter</button>
 				
 			</form>
 		</div>

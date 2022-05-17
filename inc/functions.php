@@ -107,8 +107,9 @@
 		return $result;
 		mysqli_free_result($req);
 	}
-	function add_categorie($nom,$idmembre){
-		$sql="insert into gerercategorie (idmembre,nom) values('$idmembre','$nom')";
+	function add_blog($titre,$description,$date,$photo){
+		$sql="insert into blog values(null,'%s','%s','%s','%s')";
+		$sql = sprintf($sql,$titre,$description,$date,$photo);
 		$insert_req = mysqli_query(dbconnect(),$sql);
 	}
 	function list_categorie($idmembre){
